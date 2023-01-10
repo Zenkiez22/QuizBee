@@ -31,6 +31,14 @@ h1 {
   border-width: thin;
 }
 
+.button-wrapper {
+  text-align: center;
+}
+
+
+button {
+  width: 100%;
+}
 
   .question{
     font-weight: 600;
