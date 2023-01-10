@@ -1,21 +1,103 @@
 var myQuestions = [
     {
-      question: "What is the capital of the philippines?",
+      question: "1. What is the sum of 130+125+191?",
       answers: {
-        a: 'Beijing',
-        b: 'Bangkok',
-        c: 'Manila'
+        a: 335,
+        b: 456,
+        c: 446,
+        d: 426
       },
       correctAnswer: 'c'
     },
     {
-      question: "What is the summer of the capital of the Philippines?",
+      question: "2. If we minus 712 from 1500, how much do we get?",
       answers: {
-        a: 'Baguio City',
-        b: 'Zambales City',
-        c: 'Tondo City'
+        a: 788,
+        b: 778,
+        c: 768,
+        d: 758
       },
       correctAnswer: 'a'
+    },
+    {
+      question: "3. 50 times of 8 is equal to:",
+      answers: {
+        a: 80,
+        b: 400,
+        c: 800,
+        d: 4000
+      },
+      correctAnswer: 'b'
+    },
+    {
+      question: "4. 110 divided by 10 is:",
+      answers: {
+        a: 11,
+        b: 10,
+        c: 5,
+        d: 'None of these'
+      },
+      correctAnswer: 'a'
+    },
+    {
+      question: "5. 20+(90÷2) is equal to:",
+      answers: {
+        a: 50,
+        b: 55,
+        c: 65,
+        d: 60
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "6. The product of 82 and 5 is:",
+      answers: {
+        a: 400,
+        b: 410,
+        c: 420,
+        d: 'None of these'
+      },
+      correctAnswer: 'b'
+    },
+    {
+      question: "7. Find the missing terms in multiple of 3: 3, 6, 9, __, 15",
+      answers: {
+        a: 10,
+        b: 11,
+        c: 12,
+        d: 13
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "8. Solve 24÷8+2.",
+      answers: {
+        a: 5,
+        b: 6,
+        c: 8,
+        d: 12
+      },
+      correctAnswer: 'a'
+    },
+    {
+      question: "9. Solve: 300 – (150×2)",
+      answers: {
+        a: 150,
+        b: 100,
+        c: 50,
+        d: 0
+      },
+      correctAnswer: 'd'
+    },
+    {
+      question: "10. The product of 121 x 0 x 200 x 25 is",
+      answers: {
+        a: 1500,
+        b: 0,
+        c: 4000,
+        d: 'None of these'
+      },
+      correctAnswer: 'b'
     }
   ];
   
@@ -94,7 +176,9 @@ var myQuestions = [
       }
   
       // show number of correct answers out of total
-      resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+      // change to alert
+      //resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+      alert(`Result: ${numCorrect} out of ${questions.length}`);
     }
   
     // show questions right away
