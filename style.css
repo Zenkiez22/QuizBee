@@ -46,8 +46,14 @@ button {
   }
   .answers {
       margin-bottom: 20px;
-
   }
+
+  input, label {
+    margin-right: 5px;
+  }
+
+
+
   #submit{
     font-family: sans-serif;
     font-size: 20px;
