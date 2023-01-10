@@ -174,11 +174,14 @@ var myQuestions = [
           answerContainers[i].style.color = 'red';
         }
       }
-  
+      
+      //conditional statements if passed or fail
+      let msgRemarks = (numCorrect>=7) ? 'Remarks: Passed':'Remarks: Failed';
+      
       // show number of correct answers out of total
       // change to alert
       //resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-      alert(`Result: ${numCorrect} out of ${questions.length}`);
+      alert(`Result: ${numCorrect} out of ${questions.length}, ${msgRemarks}`);
     }
   
     // show questions right away
