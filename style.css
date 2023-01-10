@@ -62,3 +62,16 @@ button {
   #submit:hover{
     background-color: #3a8;
   }
+
+  .image-wrapper {
+      width: 900px;
+      height: auto;
+      margin: auto;
+
+  }
+  .section-home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: #333;
+  }
