@@ -21,12 +21,12 @@ h1 {
 
 
 .question-container {
-  border: #297;
+  border: black;
   border-style: solid;
   border-radius: 10px;
   padding: 2rem;
-  height: 500px;
-  width: 500px;
+  min-height: 500px;
+  width: 800px;
   margin: auto;
   border-width: thin;
 }
@@ -42,9 +42,11 @@ button {
 
   .question{
     font-weight: 600;
+    margin-bottom: 10px;
   }
   .answers {
       margin-bottom: 20px;
+
   }
   #submit{
     font-family: sans-serif;
