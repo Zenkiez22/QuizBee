@@ -3,6 +3,20 @@ body{
     font-family: sans-serif;
     color: #333;
   }
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
   .question{
     font-weight: 600;
   }
