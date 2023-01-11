@@ -161,8 +161,8 @@ var myQuestions = [
       // for each question...
       for(var i=0; i<questions.length; i++){
   
-        // // first reset the list of answers
-        // answers = [];
+        // first reset the list of answers
+        answers = [];
   
         // for each available answer...
         for(letter in questions[i].answers){
@@ -208,7 +208,7 @@ var myQuestions = [
 
       // finally combine our output list into one string of html and put it on the page
       //quizContainer.innerHTML = "";
-      //quizContainer.innerHTML = output.join('');
+      quizContainer.innerHTML = output.join('');
 
       //conditional statements if passed or fail
       let msgRemarks = (numCorrect>=7) ? 'Remarks: Passed':'Remarks: Failed';
