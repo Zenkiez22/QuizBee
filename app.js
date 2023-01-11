@@ -234,15 +234,12 @@ var myQuestions = [
       var answerContainers2 = quizContainer.querySelectorAll('.answers');
       for(var i=0; i<questions.length; i++){
         answerContainers2[i].style.color = correctAnswerColor[i];
-      }
-
-      for(var i=0; i<questions.length; i++){
         checkedAnswer=answerContainers2[i].querySelectorAll('input');
         //console.log(correctAnswer);
-        console.log(checkedAnswer.length);
+        //console.log(checkedAnswer.length);
         for(var j=0; j<checkedAnswer.length; j++){
           //console.log(correctAnswer[i][j]);
-          console.log(checkedAnswer[j].checked);
+          //console.log(checkedAnswer[j].checked);
           checkedAnswer[j].checked = correctAnswer[i][j];
         }
       }

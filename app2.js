@@ -153,10 +153,58 @@ var myQuestions = [
       // keep track of user's answers
       var userAnswer = '';
       var numCorrect = 0;
+
+      // we'll need a place to store the output and the answer choices
+      var output = [];
+      var answers;
+
+      // store correct answers
+      var correctAnswerColor = [];
+      var correctAnswer = [];
       
       // for each question...
       for(var i=0; i<questions.length; i++){
   
+        // first reset the list of answers
+        answers = [];
+        
+        // for each available answer...
+        for(letter in questions[i].answers){
+  
+          // ...add an html radio button
+          answers.push(
+            '<label>'
+              + '<input disabled type="radio" name="question'+i+'" value="'+letter+'">'
+              + letter + ': '
+              + questions[i].answers[letter]
+            + '</label><br>'
+          );
+        } 
+
+        answers.push('<label class="correctAnswer">Correct answer: ' + questions[i].correctAnswer + '</label>');
+        // add this question and its answers to the output
+        output.push(
+          '<div class="question">' + questions[i].question + '</div>'
+          + '<div class="answers">' + answers.join('') + '</div>'
+        );
+        
+        var checkedAnswer=answerContainers[i].querySelectorAll('input');
+        //console.log(answerContainers.length);
+        correctAnswer[i] = [];
+        for(var j=0; j<checkedAnswer.length; j++){
+          // console.log(checkedAnswer.length);
+          // console.log(checkedAnswer[j]);
+          // console.log(checkedAnswer[j].checked);
+          if(checkedAnswer[j].checked == true){
+            correctAnswer[i][j] = true;
+            //console.log(correctAnswer[i][j]);
+          }
+          else{
+            correctAnswer[i][j] =  false;
+            //console.log(correctAnswer[i][j]);
+          }
+        }
+
         // find selected answer
         userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
         
@@ -167,14 +215,35 @@ var myQuestions = [
           
           // color the answers green
           answerContainers[i].style.color = 'lightgreen';
+          correctAnswerColor.push('lightgreen');
         }
         // if answer is wrong or blank
         else{
           // color the answers red
           answerContainers[i].style.color = 'red';
+          correctAnswerColor.push('red');
+          //console.log(questions[i].correctAnswer);
+        }
+
+      }
+
+      // finally combine our output list into one string of html and put it on the page
+      //quizContainer.innerHTML = ""
+      quizContainer.innerHTML = output.join('');
+
+      var answerContainers2 = quizContainer.querySelectorAll('.answers');
+      for(var i=0; i<questions.length; i++){
+        answerContainers2[i].style.color = correctAnswerColor[i];
+        checkedAnswer=answerContainers2[i].querySelectorAll('input');
+        //console.log(correctAnswer);
+        //console.log(checkedAnswer.length);
+        for(var j=0; j<checkedAnswer.length; j++){
+          //console.log(correctAnswer[i][j]);
+          //console.log(checkedAnswer[j].checked);
+          checkedAnswer[j].checked = correctAnswer[i][j];
         }
       }
-      
+
       //conditional statements if passed or fail
       let msgRemarks = (numCorrect>=7) ? 'Remarks: Passed':'Remarks: Failed';
       
