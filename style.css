@@ -1,21 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap');
+
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 
 body{
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: 'Outfit', sans-serif;
+font-family: 'Poppins', sans-serif;
     color: #333;
   }
 
 .section {
   width: 100%;
   min-height: 100vh;
-  padding-top: 5rem;  
+  padding-top: 1rem; 
 }
 
-h1 {
+nav img {
+  width: 100px;
+}
+
+h2 {
   text-align: center;
 }
 
@@ -32,31 +42,52 @@ ul {
 
 ul li {
  list-style: none;
+ text-align: center;
 }
 
 .navbar {
- background-color: black;
+ background-color: transparent;
  position: fixed;
  width: 100%;
+ padding-right: 1.2rem;
+ 
+
 }
 
-li {
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px ;
+.back {
+  font-size: 12px;
+  margin-left: 10px;
+  color: grey;
+   font-weight: bold;
 }
-
 
 .link-wrapper {
   display: flex;
-  flex-direction: row;
- justify-content: center;
- align-content: center;
-  margin: auto;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+.links {
+  color: white;
+  display: flex;
+  gap: 1rem;
+
+}
+
+.modal fade {
+  background-color: red;
 }
 
 
+a {
+  text-decoration: none;
+  color: white;
+}
 
 .question-container {
   border: black;
@@ -89,7 +120,7 @@ button {
   input, label {
     margin-right: 5px;
   }
-  #submit{
+  /* #submit{
     font-family: sans-serif;
     font-size: 20px;
     background-color: #297;
@@ -99,13 +130,19 @@ button {
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
-  }
-  #submit:hover{
+  } 
+   #submit:hover{
     background-color: #3a8;
-  }
+  } */
+
+  .modal-backdrop {
+    background-color: black;
+ }
+
+
 
   .image-wrapper {
-      width: 900px;
+      max-width: 700px;
       height: auto;
       margin: auto;
 
@@ -114,15 +151,134 @@ button {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    /* background-color: #333; */
+    padding-left: 1rem;
+    padding-right: 2rem;
+    flex-direction: column;
+    
+  /* background-color:#394348;  */
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
+
+
+  .section-wireframe {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+    
+  /* background-color:#394348;  */
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+
+.close-button {
+  display: flex;
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  margin-right: 10px;
+  color: white;
+  width: 30px;
+  height: 30px;
+  
+}
+
+
+.carousel-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+
+  align-content: center;
+}
+
+
+.carousel-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
 
   .correctAnswer {
     color: green;
   }
 
   @media only screen and (max-width: 450px) {
-    a, li {
+    a, li, label {
       font-size: 15px;
     }
+
+    .section {
+
+      padding-left: 0.5rem; 
+      padding-right: 0.5rem; 
+    }
+
+    .question{
+      font-weight: 600;
+      font-size: 15px;
+      
+    }
+
   }
+
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+
+
+
+  #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
