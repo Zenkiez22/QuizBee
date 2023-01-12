@@ -46,7 +46,7 @@ ul li {
 }
 
 .navbar {
- background-color: #0F0F0F;
+ background-color: transparent;
  position: fixed;
  width: 100%;
  padding-right: 1.2rem;
@@ -142,7 +142,7 @@ button {
 
 
   .image-wrapper {
-      width: 700px;
+      max-width: 700px;
       height: auto;
       margin: auto;
 
@@ -153,6 +153,7 @@ button {
     display: flex;
     padding-left: 1rem;
     padding-right: 2rem;
+    flex-direction: column;
     
   /* background-color:#394348;  */
   background: #0F2027;  /* fallback for old browsers */
@@ -160,6 +161,53 @@ background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Ch
 background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
+
+
+  .section-wireframe {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+    
+  /* background-color:#394348;  */
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+
+.close-button {
+  display: flex;
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  margin-right: 10px;
+  color: white;
+  width: 30px;
+  height: 30px;
+  
+}
+
+
+.carousel-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+
+  align-content: center;
+}
+
+
+.carousel-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
 
   .correctAnswer {
     color: green;
@@ -200,4 +248,37 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
     padding: 15px;
     border-radius: 4px;
   }
-  
+
+
+
+
+  #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
